@@ -1,0 +1,25 @@
+{
+  "name": "deploy-sandbox-service",
+  "version": "0.1.0",
+  "description": "Sample service for deploy-sandbox",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larsthorup/deploy-sandbox-service.git"
+  },
+  "author": "Lars Thorup <lars@zealake.com> (http://github.com/larsthorup)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/larsthorup/deploy-sandbox-service/issues"
+  },
+  "homepage": "https://github.com/larsthorup/deploy-sandbox-service#readme",
+  "dependencies": {
+    "cryptex": "^0.6.1",
+    "knex": "^0.10.0",
+    "pg": "^4.5.3",
+    "restify": "^4.0.4"
+  }
+}
