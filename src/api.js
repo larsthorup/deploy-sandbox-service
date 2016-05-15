@@ -1,3 +1,4 @@
+var fs = require('fs');
 var cryptex = require('cryptex');
 var restify = require('restify');
 var Knex = require('knex');
@@ -30,7 +31,10 @@ function configuring () {
 function listening () {
   return new Promise(function (resolve) {
     // ToDo: verify db schema version
-    var server = restify.createServer();
+    var server = restify.createServer({
+      certificate: fs.readFileSync('./src/certs/28125098_localhost.cert'),
+      key: fs.readFileSync('./src/certs/28125098_localhost.key')
+    });
     server.pre(restify.CORS());
     server.get('/users', userHandler);
     server.listen(process.env.PORT || 1719, function () {
