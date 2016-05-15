@@ -33,8 +33,8 @@ function listening () {
   return new Promise(function (resolve) {
     // ToDo: verify db schema version
     var server = restify.createServer({
-      certificate: fs.readFileSync(path.resolve(__dirname, './certs/28125098_localhost.cert')),
-      key: fs.readFileSync(path.resolve(__dirname, './certs/28125098_localhost.key'))
+      // certificate: fs.readFileSync(path.resolve(__dirname, './certs/28125098_localhost.cert')),
+      // key: fs.readFileSync(path.resolve(__dirname, './certs/28125098_localhost.key'))
     });
     server.pre(restify.CORS());
     server.get('/users', userHandler);
